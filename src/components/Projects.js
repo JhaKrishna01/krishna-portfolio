@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaGithub, FaExternalLinkAlt, FaCalendarAlt, FaCode } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaCalendarAlt, FaCode, FaEye } from 'react-icons/fa';
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -44,6 +44,28 @@ const Projects = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <section id="projects" className="section">
       <div className="container">
@@ -56,74 +78,110 @@ const Projects = () => {
           Featured Projects
         </motion.h2>
 
-        <div className="space-y-12">
+        <motion.div 
+          className="projects-grid"
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          ref={ref}
+        >
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              ref={ref}
               className="project-card"
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              variants={cardVariants}
+              whileHover={{ y: -10 }}
             >
-              <div className={`project-content ${index % 2 === 1 ? 'reverse' : ''}`}>
-                {/* Project Image */}
-                <div className="project-image">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                  />
+              <div className="project-image-container">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                />
+                <div className="project-overlay">
                   <div className="project-category">
                     {project.category}
                   </div>
+                  <div className="project-actions">
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-action-btn"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      <FaGithub size={18} />
+                    </motion.a>
+                    <motion.a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-action-btn"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      <FaEye size={18} />
+                    </motion.a>
+                  </div>
                 </div>
-                {/* Project Details */}
-                <div className="project-details">
+              </div>
+
+              <div className="project-content">
+                <div className="project-header">
                   <div className="project-date">
                     <FaCalendarAlt size={14} /> {project.date}
                   </div>
                   <h3 className="project-title gradient-text">{project.title}</h3>
                   <h4 className="project-subtitle">{project.subtitle}</h4>
-                  <p className="project-description">{project.description}</p>
-                  <div className="project-achievements">
-                    <h5><FaCode size={16} /> Key Achievements</h5>
-                    <ul>
-                      {project.achievements.map((achievement, i) => (
-                        <li key={i}>{achievement}</li>
-                      ))}
-                    </ul>
+                </div>
+
+                <p className="project-description">{project.description}</p>
+
+                <div className="project-achievements">
+                  <h5><FaCode size={16} /> Key Achievements</h5>
+                  <ul>
+                    {project.achievements.map((achievement, i) => (
+                      <li key={i}>{achievement}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="project-tags">
+                  <h5>Technologies Used</h5>
+                  <div className="project-tags-list">
+                    {project.technologies.map((tech, i) => (
+                      <span className="project-tag" key={tech}>{tech}</span>
+                    ))}
                   </div>
-                  <div className="project-tags">
-                    <h5>Technologies Used</h5>
-                    <div className="project-tags-list">
-                      {project.technologies.map((tech, i) => (
-                        <span className="project-tag" key={tech}>{tech}</span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="project-buttons">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-secondary"
-                    >
-                      <FaGithub size={16} /> View Code
-                    </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-primary"
-                    >
-                      <FaExternalLinkAlt size={16} /> Live Demo
-                    </a>
-                  </div>
+                </div>
+
+                <div className="project-buttons">
+                  <motion.a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaGithub size={16} /> View Code
+                  </motion.a>
+                  <motion.a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaExternalLinkAlt size={16} /> Live Demo
+                  </motion.a>
                 </div>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
         <motion.div
@@ -140,14 +198,16 @@ const Projects = () => {
               I'm constantly working on new projects to expand my skills and create innovative solutions. 
               Check out my GitHub for more of my work!
             </p>
-            <a
+            <motion.a
               href="https://github.com/JhaKrishna01"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <FaGithub size={16} /> View All Projects
-            </a>
+            </motion.a>
           </div>
         </motion.div>
       </div>
