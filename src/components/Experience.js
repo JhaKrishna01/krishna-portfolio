@@ -27,17 +27,16 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="section">
-      <div className="container">
+    <section id="experience" className="py-20 bg-gradient-to-br from-[#18182a] via-[#23233a] to-[#10101a] dark:bg-[#10101a]">
+      <div className="max-w-5xl mx-auto px-4">
         <motion.h2
-          className="section-title"
+          className="text-3xl md:text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
           Experience
         </motion.h2>
-
         <div className="max-w-4xl mx-auto">
           {experiences.map((experience, index) => (
             <motion.div
@@ -49,30 +48,27 @@ const Experience = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
               {/* Timeline Line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-blue-500"></div>
-
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500"></div>
               <div className="relative pl-20 pb-12">
                 {/* Timeline Dot */}
-                <div className="absolute left-6 top-0 w-4 h-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full border-4 border-black"></div>
-
+                <div className="absolute left-6 top-0 w-4 h-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full border-4 border-[#18182a]"></div>
                 {/* Experience Card */}
-                <div className="card">
+                <div className="rounded-2xl bg-white/5 border border-white/10 backdrop-blur-lg p-8 shadow-2xl">
                   {/* Header */}
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                     <div>
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="px-3 py-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 rounded-full text-xs text-purple-400 font-medium">
+                        <span className="px-3 py-1 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 rounded-full text-xs text-indigo-300 font-medium">
                           {experience.type}
                         </span>
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-2">
                         {experience.position}
                       </h3>
-                      <h4 className="text-xl font-semibold gradient-text mb-2">
+                      <h4 className="text-xl font-semibold bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text mb-2">
                         {experience.company}
                       </h4>
                     </div>
-                    
                     <div className="flex flex-col gap-2 text-sm text-gray-400 mt-4 md:mt-0">
                       <div className="flex items-center gap-2">
                         <FaCalendarAlt size={14} />
@@ -84,12 +80,10 @@ const Experience = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Description */}
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {experience.description}
                   </p>
-
                   {/* Achievements */}
                   <div className="mb-6">
                     <h5 className="text-lg font-semibold text-white mb-4">Key Achievements</h5>
@@ -102,13 +96,12 @@ const Experience = () => {
                           animate={inView ? { opacity: 1, x: 0 } : {}}
                           transition={{ duration: 0.5, delay: 0.3 + achievementIndex * 0.1 }}
                         >
-                          <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-gray-300">{achievement}</span>
                         </motion.li>
                       ))}
                     </ul>
                   </div>
-
                   {/* Technologies */}
                   <div>
                     <h5 className="text-lg font-semibold text-white mb-4">Technologies Used</h5>
@@ -116,7 +109,7 @@ const Experience = () => {
                       {experience.technologies.map((tech, techIndex) => (
                         <motion.span
                           key={tech}
-                          className="px-3 py-1 bg-white/10 border border-white/20 rounded-full text-sm text-gray-300"
+                          className="px-3 py-1 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 rounded-full text-sm text-indigo-300 shadow-sm"
                           whileHover={{ scale: 1.05, backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={inView ? { opacity: 1, scale: 1 } : {}}
@@ -131,7 +124,6 @@ const Experience = () => {
               </div>
             </motion.div>
           ))}
-
           {/* Future Opportunities */}
           <motion.div
             className="text-center mt-12"
@@ -139,8 +131,8 @@ const Experience = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <div className="card max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold gradient-text mb-4">
+            <div className="rounded-2xl bg-white/5 border border-white/10 backdrop-blur-lg p-10 shadow-2xl max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text mb-4">
                 Looking for New Opportunities
               </h3>
               <p className="text-gray-300 mb-6">
@@ -149,7 +141,7 @@ const Experience = () => {
               </p>
               <motion.a
                 href="#contact"
-                className="btn btn-primary inline-flex items-center gap-2"
+                className="px-6 py-2 rounded-lg font-semibold bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md hover:from-purple-500 hover:to-indigo-500 transition-all duration-200 inline-flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

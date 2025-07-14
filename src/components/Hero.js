@@ -75,48 +75,45 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="hero animated-bg">
-      <div className="container hero-content">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#18182a] via-[#23233a] to-[#10101a] dark:bg-[#10101a] overflow-hidden">
+      <div className="w-full max-w-4xl mx-auto flex flex-col items-center justify-center px-4 py-24 md:py-32">
         <motion.div
-          className="hero-text-content"
+          className="w-full text-center mb-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="hero-title gradient-text"
+            className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text mb-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Hi, I'm Krishna Nand Jha
           </motion.h1>
-          
           <motion.div
-            className="hero-role"
+            className="flex items-center justify-center gap-2 text-lg md:text-2xl font-medium mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <span className="role-prefix">I'm a </span>
-            <span className="role-text gradient-text">
+            <span className="text-gray-300">I'm a</span>
+            <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text font-bold min-w-[180px] inline-block">
               {currentText}
-              <span className="cursor">|</span>
+              <span className="text-indigo-400 animate-pulse">|</span>
             </span>
           </motion.div>
-
           <motion.p
-            className="hero-subtitle"
+            className="text-gray-400 max-w-xl mx-auto text-base md:text-lg mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Computer Science undergrad specializing in <span className="gradient-text">AI/ML</span> with hands-on experience in <span className="gradient-text">full-stack development</span> and <span className="gradient-text">deep learning</span>
+            Computer Science undergrad specializing in <span className="bg-gradient-to-r from-indigo-400 to-purple-500 text-transparent bg-clip-text font-semibold">AI/ML</span> with hands-on experience in <span className="bg-gradient-to-r from-indigo-400 to-purple-500 text-transparent bg-clip-text font-semibold">full-stack development</span> and <span className="bg-gradient-to-r from-indigo-400 to-purple-500 text-transparent bg-clip-text font-semibold">deep learning</span>.
           </motion.p>
         </motion.div>
-
         <motion.div
-          className="hero-socials"
+          className="flex gap-5 justify-center mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -127,32 +124,27 @@ const Hero = () => {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="hero-social-link"
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 text-white text-2xl shadow-lg hover:shadow-indigo-500/40 transition-all duration-200 hover:scale-110 focus:outline-none"
               title={link.label}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-              whileHover={{ 
-                scale: 1.1, 
-                y: -5,
-                boxShadow: `0 10px 25px ${link.color}40`
-              }}
+              whileHover={{ scale: 1.15, y: -5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <link.icon size={20} />
+              <link.icon size={24} />
             </motion.a>
           ))}
         </motion.div>
-
         <motion.div
-          className="hero-buttons"
+          className="flex flex-wrap gap-4 justify-center mb-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
           <motion.button
             onClick={() => scrollToSection('#projects')}
-            className="btn btn-primary"
+            className="px-6 py-2 rounded-lg font-semibold bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md hover:from-purple-500 hover:to-indigo-500 transition-all duration-200"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -160,7 +152,7 @@ const Hero = () => {
           </motion.button>
           <motion.button
             onClick={() => scrollToSection('#contact')}
-            className="btn btn-secondary"
+            className="px-6 py-2 rounded-lg font-semibold border-2 border-indigo-500 text-indigo-300 bg-transparent hover:bg-indigo-500 hover:text-white transition-all duration-200"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -170,45 +162,45 @@ const Hero = () => {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-outline"
+            className="px-6 py-2 rounded-lg font-semibold border-2 border-purple-500 text-purple-300 bg-transparent hover:bg-purple-500 hover:text-white flex items-center gap-2 transition-all duration-200"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
             <FaDownload size={16} /> Resume
           </motion.a>
         </motion.div>
-
         <motion.div
-          className="hero-stats"
+          className="flex gap-6 justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.4 }}
         >
-          <div className="stat-item">
-            <span className="stat-number">10+</span>
-            <span className="stat-label">Projects</span>
+          <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl px-6 py-4 flex flex-col items-center shadow-lg min-w-[100px]">
+            <span className="text-2xl font-bold text-indigo-400">10+</span>
+            <span className="text-xs text-gray-400 uppercase tracking-wider">Projects</span>
           </div>
-          <div className="stat-item">
-            <span className="stat-number">3+</span>
-            <span className="stat-label">Years Experience</span>
+          <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl px-6 py-4 flex flex-col items-center shadow-lg min-w-[100px]">
+            <span className="text-2xl font-bold text-indigo-400">3+</span>
+            <span className="text-xs text-gray-400 uppercase tracking-wider">Years Experience</span>
           </div>
-          <div className="stat-item">
-            <span className="stat-number">5+</span>
-            <span className="stat-label">Technologies</span>
+          <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl px-6 py-4 flex flex-col items-center shadow-lg min-w-[100px]">
+            <span className="text-2xl font-bold text-indigo-400">5+</span>
+            <span className="text-xs text-gray-400 uppercase tracking-wider">Technologies</span>
           </div>
         </motion.div>
       </div>
-
       {/* Enhanced Scroll Indicator */}
       <motion.div 
-        className="scroll-indicator"
+        className="absolute left-1/2 bottom-10 -translate-x-1/2 flex flex-col items-center gap-1 opacity-80 cursor-pointer hover:opacity-100 transition-all"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 0.8 }}
         whileHover={{ scale: 1.1 }}
       >
-        <div className="scroll-indicator-dot"></div>
-        <span className="scroll-text">Scroll Down</span>
+        <div className="w-8 h-12 border-2 border-white rounded-2xl flex items-start justify-center relative">
+          <div className="w-2 h-2 bg-white rounded-full mt-2 animate-bounce"></div>
+        </div>
+        <span className="text-xs text-white/80 tracking-widest uppercase">Scroll Down</span>
       </motion.div>
     </section>
   );
