@@ -44,21 +44,12 @@ const Footer = () => {
       {/* Footer Content */}
       <footer className="bg-black/50 border-t border-white/10">
         <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-3 gap-8 items-center">
-            {/* Logo and Description */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold gradient-text mb-4">Krishna Nand Jha</h3>
-              <p className="text-gray-400 leading-relaxed">
-                Computer Science student passionate about AI/ML and full-stack development. 
-                Building intelligent systems that solve real-world problems.
-              </p>
-            </motion.div>
-
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-2 text-indigo-300 font-bold text-lg">
+              <a href="https://jhakrishna01.github.io/krishna-portfolio" className="focus:outline-none" aria-label="Go to homepage">
+                Krishna Nand Jha
+              </a>
+            </div>
             {/* Quick Links */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -15,7 +15,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://jhakrishna01.github.io/krishna-portfolio",
+  "homepage": "https://JhaKrishna01.github.io/krishna-portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -46,6 +46,6 @@
     "autoprefixer": "^10.4.21",
     "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^3.4.4"
   }
 }

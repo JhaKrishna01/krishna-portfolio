@@ -82,7 +82,9 @@ const Header = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Krishna Jha
+          <a href="https://jhakrishna01.github.io/krishna-portfolio" className="focus:outline-none" aria-label="Go to homepage">
+            Krishna Jha
+          </a>
         </motion.div>
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8" role="navigation" aria-label="Main navigation">

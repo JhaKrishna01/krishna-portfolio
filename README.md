@@ -110,3 +110,77 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ---
 
 Made with ❤️ by Krishna Nand Jha 
+
+To see your portfolio live, you have two main options:
+
+### 1. Local Preview (on your computer)
+You can run your React app locally to preview all changes before deploying:
+
+```sh
+npm start
+```
+This will open your portfolio in your browser at http://localhost:3000.
+
+---
+
+### 2. Deploy to GitHub Pages, Vercel, or Netlify (recommended for public sharing)
+
+#### **A. GitHub Pages**
+- Easiest for static React sites.
+- You’ll need to install `gh-pages` and add a few lines to your `package.json`.
+- I can guide you through this if you want.
+
+#### **B. Vercel or Netlify**
+- Free, fast, and automatic deployments from your GitHub repo.
+- Just sign up, connect your repo, and deploy.
+- Great for custom domains and continuous deployment.
+
+---
+
+**Which option would you like?**
+- Local preview (npm start)
+- Deploy to GitHub Pages
+- Deploy to Vercel
+- Deploy to Netlify
+
+Let me know your preference and I’ll walk you through it step by step! 
+
+Great choice! Let’s deploy your React portfolio to **GitHub Pages**. Here’s a step-by-step guide:
+
+---
+
+### 1. Install `gh-pages`
+This package helps deploy your build folder to GitHub Pages.
+
+```sh
+npm install --save gh-pages
+```
+
+---
+
+### 2. Update `package.json`
+- **Add a `homepage` field** at the top (replace with your actual GitHub username and repo name):
+
+```json
+"homepage": "https://JhaKrishna01.github.io/krishna-portfolio"
+```
+
+- **Add deploy scripts** under `"scripts"`:
+
+```json
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+```
+
+---
+
+### 3. Deploy
+After saving the above changes, run:
+
+```sh
+npm run deploy
+```
+
+---
+
+Would you like me to make the `package.json` changes and install `gh-pages` for you now? (Just confirm and I’ll proceed automatically!) 
