@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/krishna-portfolio/static/css/main.234ebba2.css",
+    "main.js": "/krishna-portfolio/static/js/main.81d1af10.js",
+    "index.html": "/krishna-portfolio/index.html",
+    "main.234ebba2.css.map": "/krishna-portfolio/static/css/main.234ebba2.css.map",
+    "main.81d1af10.js.map": "/krishna-portfolio/static/js/main.81d1af10.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.234ebba2.css",
+    "static/js/main.81d1af10.js"
+  ]
+}
