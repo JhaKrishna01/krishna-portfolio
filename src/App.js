@@ -19,7 +19,7 @@ function App() {
   // Send Telegram notification when someone visits the portfolio
 
   return (
-    <div className="App relative overflow-hidden">
+    <div className="App relative overflow-hidden min-h-screen bg-gray-100 text-black dark:bg-[#10101a] dark:text-white">
       <AnimatedBackground />
       <Router>
         <Header />

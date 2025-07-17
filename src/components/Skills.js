@@ -41,8 +41,8 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <div className="bg-gradient-to-b from-indigo-900 to-gray-900 p-8 rounded-lg shadow-lg">
-      <h2 className="text-3xl font-bold text-white mb-6 text-center">My Skill Map</h2>
+    <section id="skills" className="section bg-gray-100 text-gray-900 dark:bg-[#23233a] dark:text-white">
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">My Skill Map</h2>
       <div className="space-y-10">
         {skillCategories.map((category) => (
           <div key={category.title}>
@@ -51,7 +51,7 @@ export default function Skills() {
               {category.skills.map((skill) => (
                 <div key={skill.name} className="flex flex-col items-center bg-indigo-800 bg-opacity-60 rounded-xl p-4 hover:scale-105 transition">
                   <div className="text-5xl mb-2">{skill.icon}</div>
-                  <div className="text-xl font-semibold text-white">{skill.name}</div>
+                  <div className="text-xl font-semibold text-gray-900 dark:text-white">{skill.name}</div>
                   <div className="text-sm text-indigo-200 mt-1 italic">{skill.desc}</div>
                 </div>
               ))}
@@ -59,6 +59,6 @@ export default function Skills() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 } 

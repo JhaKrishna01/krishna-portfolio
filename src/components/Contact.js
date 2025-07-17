@@ -87,7 +87,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-[#18182a] via-[#23233a] to-[#10101a] dark:bg-[#10101a]">
+    <section id="contact" className="section bg-gray-100 text-gray-900 dark:bg-[#23233a] dark:text-white">
       <div className="max-w-5xl mx-auto px-4">
         <motion.h2
           className="text-3xl md:text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -140,7 +140,7 @@ const Contact = () => {
                       <info.icon size={20} className="text-white" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-white font-semibold mb-1">{info.label}</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{info.label}</h4>
                       {info.href ? (
                         <a
                           href={info.href}
@@ -164,7 +164,7 @@ const Contact = () => {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <h4 className="text-lg font-semibold text-white mb-3">Currently Available For</h4>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Currently Available For</h4>
                 <ul className="space-y-2 text-indigo-200">
                   <li className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
@@ -192,7 +192,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-white font-medium mb-2">
+                      <label htmlFor="name" className="block font-medium text-gray-900 dark:text-white mb-2">
                         Name
                       </label>
                       <input
@@ -207,7 +207,7 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-white font-medium mb-2">
+                      <label htmlFor="email" className="block font-medium text-gray-900 dark:text-white mb-2">
                         Email
                       </label>
                       <input
@@ -223,7 +223,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-white font-medium mb-2">
+                    <label htmlFor="subject" className="block font-medium text-gray-900 dark:text-white mb-2">
                       Subject
                     </label>
                     <input
@@ -238,7 +238,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-white font-medium mb-2">
+                    <label htmlFor="message" className="block font-medium text-gray-900 dark:text-white mb-2">
                       Message
                     </label>
                     <textarea

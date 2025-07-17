@@ -25,7 +25,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-[#18182a] via-[#23233a] to-[#10101a] dark:bg-[#10101a]">
+    <section id="about" className="section bg-gray-100 text-black dark:bg-[#23233a] dark:text-white">
       <div className="max-w-5xl mx-auto px-4">
         <motion.h2
           className="text-3xl md:text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -84,7 +84,7 @@ const About = () => {
                     <FaGraduationCap size={24} className="text-white" />
                   </div>
                   <div className="flex-1">
-                    <h5 className="text-xl font-semibold text-white mb-2">
+                    <h5 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                       {education.degree}
                     </h5>
                     <p className="text-purple-400 font-medium mb-2">
@@ -108,7 +108,7 @@ const About = () => {
                 </div>
               </div>
               <div className="mt-8 pt-6 border-t border-white/10">
-                <h5 className="text-lg font-semibold text-white mb-4">Areas of Interest</h5>
+                <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Areas of Interest</h5>
                 <div className="flex flex-wrap gap-2">
                   {['Data Science', 'Machine Learning', 'Artificial Intelligence', 'Data Analytics'].map((area, index) => (
                     <motion.span

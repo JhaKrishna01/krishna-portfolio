@@ -75,7 +75,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#18182a] via-[#23233a] to-[#10101a] dark:bg-[#10101a] overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gray-100 text-black dark:bg-[#18182a] dark:text-white overflow-hidden">
       <div className="w-full max-w-4xl mx-auto flex flex-col items-center justify-center px-4 py-24 md:py-32">
         <motion.div
           className="w-full text-center mb-8"

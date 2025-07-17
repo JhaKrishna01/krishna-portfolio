@@ -42,7 +42,7 @@ const Footer = () => {
         </button>
       )}
       {/* Footer Content */}
-      <footer className="bg-black/50 border-t border-white/10">
+      <footer className="pt-12 pb-6 px-4 md:px-0 bg-gray-200 text-gray-900 dark:bg-[#10101a] dark:text-white">
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2 text-indigo-300 font-bold text-lg">
@@ -58,7 +58,7 @@ const Footer = () => {
               viewport={{ once: true }}
               className="text-center"
             >
-              <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h4>
               <div className="space-y-2">
                 {['About', 'Skills', 'Experience', 'Projects', 'Contact'].map((link) => (
                   <motion.a
@@ -81,7 +81,7 @@ const Footer = () => {
               viewport={{ once: true }}
               className="text-center"
             >
-              <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Connect</h4>
               <div className="flex justify-center gap-4">
                 {socialLinks.map((link, index) => (
                   <motion.a

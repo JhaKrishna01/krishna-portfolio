@@ -27,7 +27,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-[#18182a] via-[#23233a] to-[#10101a] dark:bg-[#10101a]">
+    <section id="experience" className="section bg-gray-100 text-gray-900 dark:bg-[#18182a] dark:text-white">
       <div className="max-w-5xl mx-auto px-4">
         <motion.h2
           className="text-3xl md:text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -62,7 +62,7 @@ const Experience = () => {
                           {experience.type}
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                         {experience.position}
                       </h3>
                       <h4 className="text-xl font-semibold bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text mb-2">
@@ -86,7 +86,7 @@ const Experience = () => {
                   </p>
                   {/* Achievements */}
                   <div className="mb-6">
-                    <h5 className="text-lg font-semibold text-white mb-4">Key Achievements</h5>
+                    <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Key Achievements</h5>
                     <ul className="space-y-3">
                       {experience.achievements.map((achievement, achievementIndex) => (
                         <motion.li
@@ -104,7 +104,7 @@ const Experience = () => {
                   </div>
                   {/* Technologies */}
                   <div>
-                    <h5 className="text-lg font-semibold text-white mb-4">Technologies Used</h5>
+                    <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Technologies Used</h5>
                     <div className="flex flex-wrap gap-2">
                       {experience.technologies.map((tech, techIndex) => (
                         <motion.span

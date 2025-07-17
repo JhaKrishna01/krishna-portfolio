@@ -32,7 +32,7 @@ const cardVariants = {
 };
 
 const Testimonials = () => (
-  <section id="testimonials" className="py-20 bg-gradient-to-br from-[#18182a] via-[#23233a] to-[#10101a] dark:bg-[#10101a]">
+  <section id="testimonials" className="section bg-gray-100 text-gray-900 dark:bg-[#18182a] dark:text-white">
     <div className="max-w-4xl mx-auto px-4">
       <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text">
         Testimonials
@@ -52,7 +52,7 @@ const Testimonials = () => (
             <img src={t.image} alt={t.name} className="w-20 h-20 rounded-full mb-4 border-4 border-indigo-400 object-cover" />
             <p className="text-indigo-200 mb-4">"{t.text}"</p>
             <div className="mt-auto">
-              <h4 className="text-lg font-bold text-white">{t.name}</h4>
+              <h4 className="text-lg font-bold text-gray-900 dark:text-white">{t.name}</h4>
               <span className="text-sm text-indigo-300">{t.title}</span>
             </div>
           </motion.div>
