@@ -16,6 +16,8 @@ import NotFound from './components/NotFound';
 import AnimatedBackground from './components/AnimatedBackground';
 
 function App() {
+  // Send Telegram notification when someone visits the portfolio
+
   return (
     <div className="App relative overflow-hidden">
       <AnimatedBackground />
