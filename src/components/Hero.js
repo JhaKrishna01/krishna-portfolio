@@ -170,7 +170,7 @@ const Hero = () => {
             Get In Touch
           </motion.button>
           <motion.a
-            href="/Krishna_Jha_Resume_AI&ML_FullStack.pdf"
+            href="Krishna_Jha_Resume_AI&ML_FullStack.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2 rounded-lg font-semibold border-2 border-purple-500 text-purple-300 bg-transparent hover:bg-purple-500 hover:text-white flex items-center gap-2 transition-all duration-200"
