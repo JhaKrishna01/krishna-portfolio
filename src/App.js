@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App relative overflow-hidden min-h-screen bg-gray-100 text-black dark:bg-[#10101a] dark:text-white">
       <AnimatedBackground />
-      <Router>
+      <Router basename="/krishna-portfolio">
         <Header />
         <Routes>
           <Route path="/" element={
