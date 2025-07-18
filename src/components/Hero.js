@@ -7,6 +7,17 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollIndicator(window.scrollY < 150);
+    };
+    window.addEventListener('scroll', handleScroll);
+    // Ensure visible on mount
+    setShowScrollIndicator(true);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const roles = [
     'AI/ML Engineer',
@@ -191,16 +202,15 @@ const Hero = () => {
       </div>
       {/* Enhanced Scroll Indicator */}
       <motion.div 
-        className="absolute left-1/2 bottom-10 -translate-x-1/2 flex flex-col items-center gap-1 opacity-80 cursor-pointer hover:opacity-100 transition-all"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 0.8 }}
-        whileHover={{ scale: 1.1 }}
+        className="scroll-indicator absolute left-1/2 bottom-10 -translate-x-1/2 flex flex-col items-center gap-1 opacity-80 cursor-pointer hover:opacity-100 transition-all"
+        initial={{ opacity: 1 }}
+        animate={{ opacity: showScrollIndicator ? 1 : 0 }}
+        transition={{ duration: 0.6 }}
       >
         <div className="w-8 h-12 border-2 border-white rounded-2xl flex items-start justify-center relative">
           <div className="w-2 h-2 bg-white rounded-full mt-2 animate-bounce"></div>
         </div>
-        <span className="text-xs text-white/80 tracking-widest uppercase">Scroll Down</span>
+        <span className="scroll-text mt-2 text-xs tracking-widest uppercase">Scroll Down</span>
       </motion.div>
     </section>
   );
