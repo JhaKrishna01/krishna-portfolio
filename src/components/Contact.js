@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaMapMarkerAlt } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -20,18 +21,17 @@ const Contact = () => {
   const [showToast, setShowToast] = useState(false);
   const [toastMsg, setToastMsg] = useState('');
 
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init("2Bfl4olA0wvlIcdY7");
+  }, []);
+
   const contactInfo = [
     {
       icon: FaEnvelope,
       label: 'Email',
       value: 'jha.krishna1357@gmail.com',
       href: 'mailto:jha.krishna1357@gmail.com'
-    },
-    {
-      icon: FaPhone,
-      label: 'Phone',
-      value: '+91 7794058579',
-      href: 'tel:+917794058579'
     },
     {
       icon: FaLinkedin,
@@ -74,16 +74,41 @@ const Contact = () => {
       setShowToast(true);
       return;
     }
+    
+    // Debug: Check environment variables
+    console.log('Service ID:', process.env.REACT_APP_EMAILJS_SERVICE_ID);
+    console.log('Template ID:', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+    console.log('Public Key:', process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+    
     setIsSubmitting(true);
     setShowToast(false);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setToastMsg('Thank you for your message! I will get back to you soon.');
+    try {
+      const result = await emailjs.send(
+        "service_6gykqf5",
+        "template_4nc0vuf",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'jha.krishna1357@gmail.com'
+        },
+        "2Bfl4olA0wvlIcdY7"
+      );
+      
+      if (result.status === 200) {
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setToastMsg('Thank you for your message! I will get back to you soon.');
+        setShowToast(true);
+      }
+    } catch (error) {
+      console.error('Email send failed:', error);
+      setToastMsg('Sorry, there was an error sending your message. Please try again or contact me directly.');
       setShowToast(true);
-    }, 2000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

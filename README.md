@@ -93,6 +93,15 @@ Update the content in each component file:
 - `src/components/Projects.js` - Project details
 - `src/components/Contact.js` - Contact information
 
+## ⚠️ EmailJS Setup Note
+
+**Important:** For the contact form to work, you must hardcode your EmailJS credentials (Service ID, Template ID, and Public Key) directly in `src/components/Contact.js`. Using environment variables (like a `.env` file) may not work in all setups, especially with Create React App or some deployment environments.
+
+**How to set up:**
+1. Open `src/components/Contact.js`.
+2. Replace the values for `service_xxx`, `template_xxx`, and `publicKey_xxx` with your actual EmailJS credentials in both `emailjs.init(...)` and `emailjs.send(...)`.
+3. Do **not** rely on `.env` for these values unless you have verified it works in your environment.
+
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
@@ -183,4 +192,3 @@ npm run deploy
 
 ---
 
-Would you like me to make the `package.json` changes and install `gh-pages` for you now? (Just confirm and I’ll proceed automatically!) 
