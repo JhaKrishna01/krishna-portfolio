@@ -138,14 +138,22 @@ const Header = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 bg-black/80 backdrop-blur-lg flex items-center justify-center z-40"
+            className="fixed inset-0 bg-black/80 backdrop-blur-lg z-40 flex flex-col items-end"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
+            {/* Close Button */}
+            <button
+              className="m-6 text-white text-2xl p-2 rounded-full hover:bg-white/10 transition"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <FaTimes />
+            </button>
             <motion.nav
-              className="bg-[#18182a] border border-white/10 rounded-2xl p-8 flex flex-col gap-4 min-w-[220px] w-[90%] max-w-xs shadow-xl"
+              className="bg-[#18182a] border border-white/10 rounded-l-2xl p-8 flex flex-col gap-4 min-w-[220px] w-[80vw] max-w-xs shadow-xl mr-0"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}

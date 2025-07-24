@@ -47,9 +47,9 @@ const Projects = () => {
   ];
 
   // Collect unique categories and technologies
-  const categories = Array.from(new Set(projects.map(p => p.category)));
-  const technologies = Array.from(new Set(projects.flatMap(p => p.technologies)));
-  const filters = ['All', ...categories, ...technologies];
+  const categories = projects.map(p => p.category);
+  const technologies = projects.flatMap(p => p.technologies);
+  const filters = Array.from(new Set(['All', ...categories, ...technologies]));
 
   // Filter logic
   const filteredProjects = selectedFilter === 'All'
