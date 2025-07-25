@@ -3,23 +3,24 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    name: 'Amit Sharma',
-    title: 'Senior Developer, TechCorp',
+    name: 'Shailaj',
+    title: 'lead developer,Prayana Electric',
     text: 'Krishna is a highly skilled engineer with a passion for learning and delivering quality work. His AI/ML expertise and teamwork made a real impact on our project.',
     image: 'https://randomuser.me/api/portraits/men/32.jpg'
   },
   {
-    name: 'Priya Singh',
-    title: 'Mentor, VIT-AP',
+    name: 'Dr. Sudha Ellison Mathe',
+    title: 'Founder & CEO - PrayanaElectric Pvt. Ltd.',
     text: 'A creative problem solver and a quick learner. Krishna consistently exceeded expectations in both technical and collaborative tasks.',
-    image: 'https://randomuser.me/api/portraits/women/44.jpg'
+    image: 'https://randomuser.me/api/portraits/men/44.jpg'
   },
   {
-    name: 'Rahul Verma',
+    name: 'Nandhan Golla',
     title: 'Project Lead, Hackathon',
     text: 'His leadership and technical skills were crucial to our hackathon win. Krishna brings energy and innovation to every team.',
     image: 'https://randomuser.me/api/portraits/men/65.jpg'
   }
+  
 ];
 
 const cardVariants = {
@@ -49,7 +50,6 @@ const Testimonials = () => (
             custom={i}
             whileHover={{ scale: 1.07 }}
           >
-            <img src={t.image} alt={t.name} className="w-20 h-20 rounded-full mb-4 border-4 border-indigo-400 object-cover" />
             <p className="text-indigo-200 mb-4">"{t.text}"</p>
             <div className="mt-auto">
               <h4 className="text-lg font-bold text-gray-900 dark:text-white">{t.name}</h4>
