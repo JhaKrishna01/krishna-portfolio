@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/krishna-portfolio/static/css/main.af5c90dc.css",
-    "main.js": "/krishna-portfolio/static/js/main.326c4110.js",
+    "main.js": "/krishna-portfolio/static/js/main.4c4f6240.js",
     "index.html": "/krishna-portfolio/index.html",
     "main.af5c90dc.css.map": "/krishna-portfolio/static/css/main.af5c90dc.css.map",
-    "main.326c4110.js.map": "/krishna-portfolio/static/js/main.326c4110.js.map"
+    "main.4c4f6240.js.map": "/krishna-portfolio/static/js/main.4c4f6240.js.map"
   },
   "entrypoints": [
     "static/css/main.af5c90dc.css",
-    "static/js/main.326c4110.js"
+    "static/js/main.4c4f6240.js"
   ]
 }
