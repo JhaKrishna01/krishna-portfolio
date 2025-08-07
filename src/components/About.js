@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
-
+import { tracker } from './track'; // Assuming tracker function is exported from track.js
 const About = () => {
   const [ref, inView] = useInView({
     threshold: 0.3,
@@ -23,10 +23,12 @@ const About = () => {
     "Adept in Python, React, Node.js, and AWS",
     "Seeking roles to build scalable, intelligent systems"
   ];
-
+  const dummy = tracker(); // Call the tracker function to log user data
   return (
     <section id="about" className="section bg-gray-100 text-black dark:bg-[#23233a] dark:text-white">
+      <div>{dummy}</div>
       <div className="max-w-5xl mx-auto px-4">
+            
         <motion.h2
           className="text-3xl md:text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text"
           initial={{ opacity: 0, y: 50 }}
