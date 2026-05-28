@@ -120,7 +120,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Computer Science undergrad specializing in <span className="bg-gradient-to-r from-indigo-400 to-purple-500 text-transparent bg-clip-text font-semibold">AI/ML</span> with hands-on experience in <span className="bg-gradient-to-r from-indigo-400 to-purple-500 text-transparent bg-clip-text font-semibold">full-stack development</span> and <span className="bg-gradient-to-r from-indigo-400 to-purple-500 text-transparent bg-clip-text font-semibold">deep learning</span>.
+            Computer Science undergrad specializing in <span className="bg-gradient-to-r from-indigo-400 to-purple-500 text-transparent bg-clip-text font-semibold">AI/ML</span> with hands-on expe[...]
           </motion.p>
         </motion.div>
         <motion.div
@@ -135,7 +135,7 @@ const Hero = () => {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 text-white text-2xl shadow-lg hover:shadow-indigo-500/40 transition-all duration-200 hover:scale-110 focus:outline-none"
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 text-white text-2xl shadow-lg ho[...]
               title={link.label}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -155,7 +155,7 @@ const Hero = () => {
         >
           <motion.button
             onClick={() => scrollToSection('#projects')}
-            className="px-6 py-2 rounded-lg font-semibold bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md hover:from-purple-500 hover:to-indigo-500 transition-all duration-200"
+            className="px-6 py-2 rounded-lg font-semibold bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md hover:from-purple-500 hover:to-indigo-500 transition-all duration-200[...]
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -170,10 +170,10 @@ const Hero = () => {
             Get In Touch
           </motion.button>
           <motion.a
-            href="Krishna_Jha_Resume_AI&ML_FullStack.pdf"
+            href="RESUME_JHA_KRISHNA.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2 rounded-lg font-semibold border-2 border-purple-500 text-purple-300 bg-transparent hover:bg-purple-500 hover:text-white flex items-center gap-2 transition-all duration-200"
+            className="px-6 py-2 rounded-lg font-semibold border-2 border-purple-500 text-purple-300 bg-transparent hover:bg-purple-500 hover:text-white flex items-center gap-2 transition-all dur[...]
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -216,4 +216,4 @@ const Hero = () => {
   );
 };
 
-export default Hero; 
+export default Hero;
