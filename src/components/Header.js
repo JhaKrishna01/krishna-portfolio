@@ -118,7 +118,7 @@ const Header = () => {
           href="RESUME_JHA_KRISHNA.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="ml-4 px-4 py-2 rounded-lg font-semibold bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md hover:from-purple-500 hover:to-indigo-500 transition-all duration-[...]
+          className="ml-4 px-4 py-2 rounded-lg font-semibold bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md hover:from-purple-500 hover:to-indigo-500 transition-all duration-200 flex items-center gap-2 focus:outline-none"
         >
           <FaDownload /> Resume
         </a>
