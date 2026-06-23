@@ -14,15 +14,15 @@ const Projects = () => {
   const projects = [
     {
       title: "Speech-Activated Machine (SAM)",
-      subtitle: "OSC Hackathon Project",
-      date: "April 2025",
-      description: "A hands-free AI voice assistant using speech recognition and Meta's Segment Anything Model (SAM), enabling seamless interaction through voice commands.",
+      subtitle: "Voice-based LLM Assistant · Team of 2",
+      date: "2025",
+      description: "A voice-based LLM assistant enabling real-time voice and text conversations using speech recognition, LLM reasoning, and natural-sounding text-to-speech.",
       achievements: [
-        "Engineered a hands-free AI voice assistant using speech recognition and Meta's Segment Anything Model (SAM)",
-        "Designed a futuristic, accessible UI in Figma and deployed a working prototype",
-        "Enhanced user accessibility through voice-controlled interactions"
+        "Integrated Whisper, LLaMA 3.3, ElevenLabs, and WebRTC VAD to deliver low-latency, context-aware voice interactions",
+        "Implemented contextual memory workflows, goal tracking, weather lookup, and tool-based interactions in a Flask-based web app",
+        "Built end-to-end speech pipeline with real-time voice activity detection and natural TTS output"
       ],
-      technologies: ["Python", "Speech Recognition", "Meta SAM", "Figma", "AI/ML"],
+      technologies: ["Python", "Flask", "Whisper", "LLaMA 3.3", "ElevenLabs", "WebRTC VAD", "HTML", "Tailwind CSS", "JavaScript"],
       category: "AI/ML",
       github: "#",
       live: "#",
@@ -31,14 +31,14 @@ const Projects = () => {
     {
       title: "Post-Hurricane Danger Detection",
       subtitle: "Using Satellite Imagery",
-      date: "Jan 2025 - Apr 2025",
-      description: "A deep learning pipeline to identify hazardous zones from satellite images following hurricanes, implementing multiple CNN architectures for improved accuracy.",
+      date: "Jan 2025 – Apr 2025",
+      description: "A CNN-based deep learning pipeline to identify hazardous zones from satellite images following hurricanes, achieving 92% accuracy with a hybrid model architecture.",
       achievements: [
-        "Developed a deep learning pipeline to identify hazardous zones from satellite images",
-        "Implemented and evaluated three CNN architectures: base CNN, L2 regularized CNN, and hybrid CNN",
-        "Achieved notable improvements in performance and generalization across test datasets"
+        "Built a CNN-based deep learning system for post-hurricane hazard detection; achieved 92% accuracy with a hybrid CNN model",
+        "Processed a large-scale satellite imagery dataset (45k+ images) using scalable preprocessing pipelines for GPU training",
+        "Implemented regularization, hybrid architectures, and explainable AI techniques to improve reliability and interpretability"
       ],
-      technologies: ["Python", "TensorFlow", "CNN", "Deep Learning", "Computer Vision", "Satellite Imagery"],
+      technologies: ["Python", "TensorFlow", "Keras", "CNN", "NumPy", "Pandas", "Matplotlib", "Computer Vision"],
       category: "Deep Learning",
       github: "#",
       live: "#",
@@ -244,4 +244,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;
