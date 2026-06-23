@@ -187,15 +187,15 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 1.4 }}
         >
           <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl px-6 py-4 flex flex-col items-center shadow-lg min-w-[100px]">
-            <span className="text-2xl font-bold text-indigo-400">10+</span>
+            <span className="text-2xl font-bold text-indigo-400">5+</span>
             <span className="text-xs text-gray-400 uppercase tracking-wider">Projects</span>
           </div>
           <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl px-6 py-4 flex flex-col items-center shadow-lg min-w-[100px]">
-            <span className="text-2xl font-bold text-indigo-400">3+</span>
-            <span className="text-xs text-gray-400 uppercase tracking-wider">Years Experience</span>
+            <span className="text-2xl font-bold text-indigo-400">2</span>
+            <span className="text-xs text-gray-400 uppercase tracking-wider">Internships</span>
           </div>
           <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl px-6 py-4 flex flex-col items-center shadow-lg min-w-[100px]">
-            <span className="text-2xl font-bold text-indigo-400">5+</span>
+            <span className="text-2xl font-bold text-indigo-400">15+</span>
             <span className="text-xs text-gray-400 uppercase tracking-wider">Technologies</span>
           </div>
         </motion.div>
