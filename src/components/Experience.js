@@ -11,17 +11,31 @@ const Experience = () => {
 
   const experiences = [
     {
+      company: "Varaha ClimateAg",
+      position: "AI/ML Intern",
+      location: "Bangalore, India",
+      duration: "Dec 2025 – June 2026",
+      description: "Worked on the ARR (Afforestation, Reforestation, Revegetation) pod, building AI-powered systems for climate-tech applications including sapling identification and data pipeline development.",
+      achievements: [
+        "Built an AI-powered sapling species identification system using Google Gemini's vision capabilities via API and Prompt Engineering, eliminating manual image processing and reducing labor effort by 25%",
+        "Collected and annotated image data to train AI models for container volume prediction, supporting model development and improving accuracy through high-quality dataset creation",
+        "Assisted in experimentation and iterative improvement of AI workflows by validating outputs, refining prompts, and supporting scalable data processing pipelines"
+      ],
+      technologies: ["Python", "Google Gemini API", "Prompt Engineering", "Computer Vision", "TensorFlow", "OpenCV", "LLM"],
+      type: "Internship"
+    },
+    {
       company: "Prayana Electric",
       position: "Full Stack Web Development Intern",
       location: "VIT-AP, Amaravati",
       duration: "Nov 2024 – Apr 2025",
-      description: "Developed responsive web applications and collaborated with cross-functional teams to build innovative solutions.",
+      description: "Developed responsive web applications and collaborated with cross-functional teams to build innovative solutions for an EV startup.",
       achievements: [
-        "Developed responsive front-end interfaces using React.js, improving user engagement",
-        "Integrated back-end APIs with Node.js and Express, reducing latency by 20%",
-        "Collaborated with cross-functional teams to build a dashboard for vehicle tracking"
+        "Developed responsive front-end interfaces using React.js, improving user engagement by 25%",
+        "Integrated REST APIs with Node.js Express in a distributed architecture, reducing latency by 20%",
+        "Worked in an Agile environment, collaborating with cross-functional teams to build a vehicle tracking dashboard with real-time analytics"
       ],
-      technologies: ["React.js", "Node.js", "Express", "JavaScript", "HTML/CSS", "Git"],
+      technologies: ["React.js", "Node.js", "Express", "REST APIs", "JavaScript", "HTML/CSS", "Git"],
       type: "Internship"
     }
   ];
@@ -156,4 +170,4 @@ const Experience = () => {
   );
 };
 
-export default Experience; 
+export default Experience;
