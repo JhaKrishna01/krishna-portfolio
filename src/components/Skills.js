@@ -28,6 +28,15 @@ const skillCategories = [
     ],
   },
   {
+    title: "AI & Data",
+    skills: [
+      { icon: <SiTensorflow />, name: "LangChain", desc: "The Chain Continent" },
+      { icon: <SiNumpy />, name: "RAG Pipelines", desc: "The Retrieval Ridge" },
+      { icon: <SiPandas />, name: "GEN AI", desc: "The GenAI Galaxy" },
+      { icon: <SiGooglecolab />, name: "Prompt Eng.", desc: "The Prompt Peninsula" },
+    ],
+  },
+  {
     title: "Tools & Technologies",
     skills: [
       { icon: <FaGithub />, name: "Git/GitHub", desc: "The Collaboration Capital" },
@@ -61,4 +70,4 @@ export default function Skills() {
       </div>
     </section>
   );
-} 
+}
